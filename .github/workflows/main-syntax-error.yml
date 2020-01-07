@@ -1,4 +1,4 @@
-name: CI
+name: Syntax Error
 
 on: [repository_dispatch]
 

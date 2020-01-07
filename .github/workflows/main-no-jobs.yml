@@ -1,0 +1,19 @@
+name: No Jobs
+on: [repository_dispatch]
+
+jobs:
+  test:
+    name: test
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        build:
+        - stable
+        - beta
+        include:
+        - build: stable
+          os: ubuntu-latest
+    steps:
+    - name: Hello world
+      run: |
+        echo hello world
